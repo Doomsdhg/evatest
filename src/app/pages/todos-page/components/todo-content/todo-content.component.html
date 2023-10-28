@@ -1,0 +1,13 @@
+<div *ngIf="(current_todo$ | async) as todo"
+     class="todos-content">
+  <form [formGroup]="todo_formgroup"
+        class="todos-content__form">
+    <input class="todos-content__title"
+           type="text"
+           formControlName="title">
+
+    <textarea class="todos-content__text"
+              type="text"
+              formControlName="text"></textarea>
+  </form>
+</div>

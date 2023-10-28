@@ -1,0 +1,42 @@
+@import './fonts';
+
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+ul, li {
+  margin:0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: 0;
+  display: flex;
+}
+
+* {
+  font-family: "Open Sans", "Calibri", sans-serif;
+}
+
+div {
+  height: 100%;
+  width: 100%;
+}
+
+input, textarea {
+  border: none;
+
+  &:focus {
+    border: none;
+  }
+}
+
+a {
+  width: 100%;
+  color: inherit;
+  text-decoration: inherit;
+}

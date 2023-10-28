@@ -1,0 +1,27 @@
+<div class="todos-page">
+  <div class="todos-page__header-wrapper">
+    <h1 class="todos-page__title">Мои заметки</h1>
+    <button class="todos-page__add-button"
+            mat-fab
+            color="primary"
+            (click)="addNewtodo()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+  <div class="todos-page__todos todos">
+    <ul class="todos__list">
+      <li *ngFor="let todo of (todos_service.todos$ | async)"
+          class="todos__todo-link-wrapper">
+        <a class="todos__todo-link"
+           [routerLink]="[todo.id]">
+          <p class="todos__todo-link-title">{{todo.title}}</p>
+        </a>
+      </li>
+    </ul>
+
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
